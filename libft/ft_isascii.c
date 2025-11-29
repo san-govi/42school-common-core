@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/23 20:46:37 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 19:29:06 by sgovinda         ###   ########.fr       */
+/*   Created: 2025/11/29 19:19:15 by sgovinda          #+#    #+#             */
+/*   Updated: 2025/11/29 19:28:38 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
-#include <unistd.h>	// for write()
+#include "libft.h"
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-
-#endif
+int	ft_isascii(int c)
+{
+	if (c >= 0 && c <= 127 )
+	{
+		return (1);
+	}
+	return (0);
+}
