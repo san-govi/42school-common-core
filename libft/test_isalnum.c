@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 19:05:24 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 19:09:09 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/11/29 19:37:09 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,17 @@ void	test_isalnum(int c, int expected, const char *description)
 int	main(void)
 {
 	// Digit tests.
-	test_isalnum('0', 1, "is digit.");
-	test_isalnum('5', 1, "is digit.");
-	test_isalnum('9', 1, "is digit.");
+	test_isalnum('0', 1, "digit.");
+	test_isalnum('5', 1, "digit.");
+	test_isalnum('9', 1, "digit.");
 
 	// Alphabet test.
-	test_isalnum('A', 1, "is an uppercase letter.");
-	test_isalnum('a', 1, "is a lowercase letter.");
+	test_isalnum('A', 1, "an uppercase letter.");
+	test_isalnum('a', 1, "a lowercase letter.");
 
 	// Non-alphanumeric test
-	test_isalnum('/', 0, "is a special character.");
-	test_isalnum(':', 0, "is punctuation.");
+	test_isalnum('/', 0, "a special character.");
+	test_isalnum(':', 0, "punctuation.");
 
 	//Special cases.
 	

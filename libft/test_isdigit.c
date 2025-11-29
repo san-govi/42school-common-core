@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 18:31:01 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 18:49:47 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/11/29 19:37:33 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,15 @@ void	test_isdigit(int c, int expected, const char *description)
 int	main(void)
 {
 	// Digit tests.
-	test_isdigit('0', 1, "is digit.");
-	test_isdigit('5', 1, "is digit.");
-	test_isdigit('9', 1, "is digit.");
+	test_isdigit('0', 1, "digit.");
+	test_isdigit('5', 1, "digit.");
+	test_isdigit('9', 1, "digit.");
 
 	// Non-digit test.
-	test_isdigit('A', 0, "is an uppercase letter.");
-	test_isdigit('a', 0, "is a lowercase letter.");
-	test_isdigit('/', 0, "is a special character.");
-	test_isdigit(':', 0, "is punctuation.");
+	test_isdigit('A', 0, "an uppercase letter.");
+	test_isdigit('a', 0, "a lowercase letter.");
+	test_isdigit('/', 0, "a special character.");
+	test_isdigit(':', 0, "punctuation.");
 
 	//Special cases.
 	
