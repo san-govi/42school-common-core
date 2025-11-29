@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/23 20:46:37 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 19:44:32 by sgovinda         ###   ########.fr       */
+/*   Created: 2025/11/29 19:39:45 by sgovinda          #+#    #+#             */
+/*   Updated: 2025/11/29 19:43:58 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
-#include <unistd.h>	// for write()
+#include "libft.h"
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int ft_isprint(int c);
-
-#endif
+int ft_isprint(int c)
+{
+	if (c >= 32 && c <= 126)
+	{
+		return (1);
+	}
+	return (0);
+}
