@@ -6,7 +6,7 @@
 #    By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/23 21:12:52 by sgovinda          #+#    #+#              #
-#    Updated: 2025/11/29 21:15:33 by sgovinda         ###   ########.fr        #
+#    Updated: 2025/11/29 22:03:30 by sgovinda         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ SRC = ft_isalpha.c \
 	ft_isprint.c \
 	ft_strlen.c \
 	ft_memset.c \
-	ft_bzero.c
+	ft_bzero.c \
+	ft_memcpy.c
 OBJ = $(SRC:%.c=%.o)
 
 # Default rule to build entire library if needed, otherwise do nothing.
