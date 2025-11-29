@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/23 20:46:37 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 16:47:28 by sgovinda         ###   ########.fr       */
+/*   Created: 2025/11/29 16:21:31 by sgovinda          #+#    #+#             */
+/*   Updated: 2025/11/29 17:17:43 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
-#include <unistd.h>	// for write()
+#include "libft.h"
 
-int	ft_isalpha(int c);
-
-#endif
+int	ft_isalpha(int c)
+{
+	unsigned char	s;
+	s	= (unsigned char)c;
+	
+	if ((s >= 'a' && s <= 'z') || (s >= 'A' && s <= 'Z'))
+	{
+		return (1);
+	}
+	return (0);
+}
