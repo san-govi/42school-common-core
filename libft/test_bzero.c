@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   test_bzero.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/23 20:46:37 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 21:15:07 by sgovinda         ###   ########.fr       */
+/*   Created: 2025/11/29 21:15:50 by sgovinda          #+#    #+#             */
+/*   Updated: 2025/11/29 21:25:05 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
-#include <unistd.h>	// for write()
+#include <stdio.h>
+#include "libft.h"
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int ft_isprint(int c);
-size_t ft_strlen(const char *c);
-void *ft_memset(void *s, int c, size_t n);
-void ft_bzero(void *s, size_t n);
-
-#endif
+int main(void)
+{
+	char	c[10] = "abcdefghi";
+	ft_bzero(c, 5);
+	c[9] = '\0';
+	// prints nothing
+	printf("%s\n", c);
+	// prints fghi
+	printf("%s\n", c + 5);
+	return (0);
+}
