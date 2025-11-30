@@ -1,41 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/30 00:00:20 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/30 12:23:08 by sgovinda         ###   ########.fr       */
+/*   Created: 2025/11/30 00:42:16 by sgovinda          #+#    #+#             */
+/*   Updated: 2025/11/30 11:58:26 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcpy(char *dst, const char *src, size_t dsize)
+size_t ft_strlcat(char *dst, const char *src, size_t dsize)
 {
 	char	*d;
 	const char	*s;
+	size_t	dstlen;
 	size_t	srclen;
+	size_t	n;
 
 	d = dst;
 	s = src;
+	
 	srclen = 0;
-	while(*s)
+	while (*s)
 	{
 		srclen++;
 		s++;
 	}
-	if (dsize != 0)
+	dstlen = 0;
+	while (dsize > dstlen && *d != '\0')
 	{
-		while (dsize - 1 > 0 && *src != '\0')
-		{
-			*d = *src;
-			d++;
-			src++;
-			dsize--;
-		}
-		*d = '\0';
+		dstlen++;
+		d++;
 	}
-	return (srclen);
+	if (dstlen == dsize)
+	{
+		return (dsize + srclen);
+	}
+	n = dsize - dstlen - 1;
+	while (n > 0 && *src != '\0')
+	{
+		*d = *src;
+		d++;
+		src++;
+		n--;
+
+	}
+	*d = '\0';
+	return (dstlen + srclen);
 }
