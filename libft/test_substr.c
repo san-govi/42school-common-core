@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   test_substr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/30 21:11:50 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/30 22:22:49 by sgovinda         ###   ########.fr       */
+/*   Created: 2025/11/30 22:55:31 by sgovinda          #+#    #+#             */
+/*   Updated: 2025/11/30 23:08:19 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+int	main(void)
 {
-	char	*copy;
-	size_t	len;
-	size_t	i;
+	const char	*s = "Hello world";
 	
-	len = 0;
-	while (s[len])
-	{
-		len++;
-	}
-	copy = malloc(sizeof(char) * (len + 1));
-	if (!copy)
-	{
-		return (NULL);
-	}
-	i = 0;
-	while (i < len)
-	{
-		copy[i] = s[i];
-		i++;
-	}
-	copy[i] = '\0';
-	return (copy);
+	// print 'lo wor'
+	printf("%s\n", ft_substr(s, 3, 6));
+	// print null - start index beyond string 
+	printf("%s\n", ft_substr(s, 11, 6));
+	// print rld - max len greater that string
+	printf("%s\n", ft_substr(s, 8, 6));
 }
