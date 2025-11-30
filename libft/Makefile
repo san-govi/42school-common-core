@@ -6,7 +6,7 @@
 #    By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/23 21:12:52 by sgovinda          #+#    #+#              #
-#    Updated: 2025/11/30 15:13:34 by sgovinda         ###   ########.fr        #
+#    Updated: 2025/11/30 15:33:22 by sgovinda         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,8 @@ SRC = ft_isalpha.c \
 	ft_strchr.c \
 	ft_strrchr.c \
 	ft_strncmp.c \
-	ft_memchr.c
+	ft_memchr.c \
+	ft_memcmp.c
 OBJ = $(SRC:%.c=%.o)
 
 # Default rule to build entire library if needed, otherwise do nothing.
