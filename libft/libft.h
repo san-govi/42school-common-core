@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/23 20:46:37 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/30 13:08:45 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/11/30 13:22:21 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dsize);
 size_t ft_strlcat(char *dst, const char *src, size_t dsize);
 int ft_toupper(int c);
 int ft_tolower(int c);
+char *ft_strchr(const char *s, int c);
 
 #endif
