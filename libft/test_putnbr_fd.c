@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_putendl_fd.c                                  :+:      :+:    :+:   */
+/*   test_putnbr_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/01 20:51:20 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/12/01 21:25:29 by sgovinda         ###   ########.fr       */
+/*   Created: 2025/12/01 21:22:09 by sgovinda          #+#    #+#             */
+/*   Updated: 2025/12/01 21:27:35 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,17 @@
 
 int	main(void)
 {
-	ft_putendl_fd("Print Hello world in output file", 1);
-	ft_putendl_fd("Print in standard error", 2);
+	ft_putnbr_fd(-2147483648, 1);
+	ft_putchar_fd('\n', 1);
+	ft_putnbr_fd(-2147483648, 2);
+	ft_putchar_fd('\n', 2);
+	ft_putnbr_fd(0, 1);
+	ft_putchar_fd('\n', 1);
+	ft_putnbr_fd(0, 2);
+	ft_putchar_fd('\n', 2);
+	ft_putnbr_fd(2147483647, 1);
+	ft_putchar_fd('\n', 1);
+	ft_putnbr_fd(2147483647, 2);
+	ft_putchar_fd('\n', 2);
 	return (0);
 }

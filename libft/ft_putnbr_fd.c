@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_putendl_fd.c                                  :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/01 20:51:20 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/12/01 21:25:29 by sgovinda         ###   ########.fr       */
+/*   Created: 2025/12/01 20:56:31 by sgovinda          #+#    #+#             */
+/*   Updated: 2025/12/01 21:21:31 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "libft.h"
 
-int	main(void)
+void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putendl_fd("Print Hello world in output file", 1);
-	ft_putendl_fd("Print in standard error", 2);
-	return (0);
+	char	c;
+
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
+	if (n < 0)
+	{
+		write(fd, "-", 1);
+		n = -n;
+	}
+	if (n >= 10)
+		ft_putnbr_fd(n / 10, fd);
+	c = (n % 10) + '0';
+	write (fd, &c, 1);
 }
