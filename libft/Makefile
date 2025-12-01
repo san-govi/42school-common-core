@@ -6,7 +6,7 @@
 #    By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/23 21:12:52 by sgovinda          #+#    #+#              #
-#    Updated: 2025/12/01 22:39:16 by sgovinda         ###   ########.fr        #
+#    Updated: 2025/12/01 23:26:35 by sgovinda         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,8 @@ SRC = ft_isalpha.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c
 OBJ = $(SRC:%.c=%.o)
-BONUS_SRC = ft_lstnew.c
+BONUS_SRC = ft_lstnew.c \
+			ft_lstadd_front.c
 BONUS_OBJ = $(BONUS_SRC:%.c=%.o)
 
 # Default rule to build entire library if needed, otherwise do nothing.
