@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 13:23:23 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/30 13:27:26 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/01 15:41:28 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int	main(void)
 {
 	char	s[10] = "HUtao";
-	char 	*p;
+	char	*p;
 
 	printf("%s\n", s);
 	p = ft_strchr(s, 'U');

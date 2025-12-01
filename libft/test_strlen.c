@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 20:09:22 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 20:22:02 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/01 15:44:58 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ void	test_strlen(char *c, size_t expected)
 	else
 	{
 		printf("[FAIL] %s, calculated length is %ld but expected %ld\n",
-			 c, ft_strlen(c), expected);
+			c, ft_strlen(c), expected);
 	}
 }
+
 int	main(void)
 {
 	test_strlen("Letters", 7);

@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 19:45:24 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 19:48:23 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/01 15:35:05 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	test_isprint(int c, int expected, const char *description)
 {
-	if(ft_isprint(c) == expected)
+	if (ft_isprint(c) == expected)
 	{
 		printf("[PASS] %c is %s\n", c, description);
 	}

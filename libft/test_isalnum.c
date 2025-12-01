@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 19:05:24 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 19:37:09 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/01 15:31:43 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	test_isalnum(int c, int expected, const char *description)
 {
-	if(ft_isalnum(c) == expected)
+	if (ft_isalnum(c) == expected)
 	{
 		printf("[PASS] %c is %s\n", c, description);
 	}
@@ -41,6 +41,5 @@ int	main(void)
 	test_isalnum(':', 0, "punctuation.");
 
 	//Special cases.
-	
 	test_isalnum(EOF, 0, "End of file marker");
 }

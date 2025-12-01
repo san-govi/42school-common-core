@@ -6,14 +6,14 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 22:04:16 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 22:08:09 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/01 15:36:36 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-int main(void)
+int	main(void)
 {
 	char	src[] = "abcdefghi";
 	char	dest[10];

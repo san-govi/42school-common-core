@@ -6,18 +6,18 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 20:47:25 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 21:02:35 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/01 15:41:11 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-int main(void)
+int	main(void)
 {
 	char	c[10];
 
-	ft_memset(c,'1', 9);
+	ft_memset(c, '1', 9);
 	c[9] = '\0';
 	// prints 111111111
 	printf("%s\n", c);

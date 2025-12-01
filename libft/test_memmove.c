@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 23:49:31 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 23:58:51 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/01 15:39:11 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(void)
 	char	src2[] = "abcde";
 	char	src3[] = "abcde";
 	char	src4[] = "abcde";
-	
+
 	//overlap - should print ababe
 	ft_memmove(src2 + 2, src2, 2);
 	printf("%s\n", src2);

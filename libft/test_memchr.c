@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 15:13:57 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/30 15:22:44 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/01 15:35:27 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	main(void)
 {
-	char s[10] = "abcdef";
+	char	s[10] = "abcdef";
 
 	// print adrees of c
 	printf("%p\n", ft_memchr(s, 'c', 7));

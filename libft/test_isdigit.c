@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 18:31:01 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 19:37:33 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/01 15:34:47 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	test_isdigit(int c, int expected, const char *description)
 {
-	if(ft_isdigit(c) == expected)
+	if (ft_isdigit(c) == expected)
 	{
 		printf("[PASS] %c is %s\n", c, description);
 	}
@@ -39,6 +39,5 @@ int	main(void)
 	test_isdigit(':', 0, "punctuation.");
 
 	//Special cases.
-	
 	test_isdigit(EOF, 0, "End of file marker");
 }

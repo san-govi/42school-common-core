@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 19:29:41 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 19:35:09 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/01 15:34:16 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	test_isascii(int c, int expected, const char *description)
 {
-	if(ft_isascii(c) == expected)
+	if (ft_isascii(c) == expected)
 	{
 		printf("[PASS] %c is %s\n", c, description);
 	}
