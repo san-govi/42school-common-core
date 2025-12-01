@@ -6,7 +6,7 @@
 #    By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/23 21:12:52 by sgovinda          #+#    #+#              #
-#    Updated: 2025/12/01 20:38:49 by sgovinda         ###   ########.fr        #
+#    Updated: 2025/12/01 20:50:59 by sgovinda         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,8 @@ SRC = ft_isalpha.c \
 	ft_strmapi.c \
 	ft_striteri.c \
 	ft_putchar_fd.c \
-	ft_putstr_fd.c
+	ft_putstr_fd.c \
+	ft_putendl_fd.c
 OBJ = $(SRC:%.c=%.o)
 
 # Default rule to build entire library if needed, otherwise do nothing.

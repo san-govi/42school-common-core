@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_putstr_fd.c                                   :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/01 20:39:24 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/12/01 20:45:32 by sgovinda         ###   ########.fr       */
+/*   Created: 2025/12/01 20:44:44 by sgovinda          #+#    #+#             */
+/*   Updated: 2025/12/01 20:50:34 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "libft.h"
 
-int	main(void)
+void	ft_putendl_fd(char *s, int fd)
 {
-	ft_putstr_fd("Print Hello world in output file\n", 1);
-	ft_putstr_fd("Print in standard error", 2);
-	return (0);
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
 }

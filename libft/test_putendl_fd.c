@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_putstr_fd.c                                   :+:      :+:    :+:   */
+/*   test_putendl_fd.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/01 20:39:24 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/12/01 20:45:32 by sgovinda         ###   ########.fr       */
+/*   Created: 2025/12/01 20:51:20 by sgovinda          #+#    #+#             */
+/*   Updated: 2025/12/01 20:53:54 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(void)
 {
-	ft_putstr_fd("Print Hello world in output file\n", 1);
-	ft_putstr_fd("Print in standard error", 2);
+	ft_putendl_fd("Print Hello world in output file", 1);
+	ft_putendl_fd("Print in standard error", 2);
 	return (0);
 }
