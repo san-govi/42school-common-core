@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 16:21:31 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 17:17:43 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/01 12:49:34 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	ft_isalpha(int c)
 {
 	unsigned char	s;
-	s	= (unsigned char)c;
-	
+
+	s = (unsigned char)c;
 	if ((s >= 'a' && s <= 'z') || (s >= 'A' && s <= 'Z'))
 	{
 		return (1);

@@ -6,17 +6,15 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 13:06:00 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/30 13:06:22 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/01 14:43:34 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
-{	
-	if ( c >= 'A' && c <= 'Z' )
-	{
+int	ft_tolower(int c)
+{
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
-	}
 	return (c);
 }

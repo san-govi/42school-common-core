@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 18:24:29 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 18:44:52 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/01 12:50:28 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	ft_isdigit(int c)
 {
 	unsigned char	s;
-	s	= (unsigned char)c;
 
+	s = (unsigned char)c;
 	if (s >= '0' && s <= '9')
 	{
 		return (1);

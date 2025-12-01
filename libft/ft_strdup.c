@@ -6,19 +6,19 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 21:11:50 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/30 22:22:49 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/01 13:02:32 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*copy;
 	size_t	len;
 	size_t	i;
-	
+
 	len = 0;
 	while (s[len])
 	{

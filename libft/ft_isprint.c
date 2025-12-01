@@ -6,13 +6,13 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 19:39:45 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 19:43:58 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/01 12:50:54 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 	{

@@ -6,17 +6,15 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 12:29:16 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/30 12:52:13 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/01 14:44:19 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
-{	
-	if ( c >= 'a' && c <= 'z' )
-	{
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
 		return (c - 32);
-	}
 	return (c);
 }

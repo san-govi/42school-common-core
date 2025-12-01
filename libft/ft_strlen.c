@@ -6,13 +6,13 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 19:51:45 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 20:08:29 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/01 14:36:29 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *c)
+size_t	ft_strlen(const char *c)
 {
 	const char	*p;
 

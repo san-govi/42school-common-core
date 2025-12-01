@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 18:58:49 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/11/29 19:12:04 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/01 12:49:09 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 int	ft_isalnum(int c)
 {
 	unsigned char	s;
-	s	= (unsigned char)c;
 
-	if ((s >= '0' && s <= '9') || 
-		(s >= 'a' && s <= 'z') || (s >= 'A' && s <= 'Z'))
+	s = (unsigned char)c;
+	if ((s >= '0' && s <= '9')
+		|| (s >= 'a' && s <= 'z') || (s >= 'A' && s <= 'Z'))
 	{
 		return (1);
 	}
-	return(0);
+	return (0);
 }
