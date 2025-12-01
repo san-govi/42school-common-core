@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_putnbr_fd.c                                   :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/01 21:22:09 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/12/01 21:29:37 by sgovinda         ###   ########.fr       */
+/*   Created: 2025/12/01 22:25:06 by sgovinda          #+#    #+#             */
+/*   Updated: 2025/12/01 22:38:21 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-int	main(void)
+t_list	*ft_lstnew(void *content)
 {
-	ft_putnbr_fd(-2147483648, 1);
-	ft_putchar_fd('\n', 1);
-	ft_putnbr_fd(-2147483648, 2);
-	ft_putchar_fd('\n', 2);
-	ft_putnbr_fd(0, 1);
-	ft_putchar_fd('\n', 1);
-	ft_putnbr_fd(0, 2);
-	ft_putchar_fd('\n', 2);
-	ft_putnbr_fd(2147483647, 1);
-	ft_putchar_fd('\n', 1);
-	ft_putnbr_fd(2147483647, 2);
-	ft_putchar_fd('\n', 2);
-	return (0);
+	t_list	*node;
+
+	node = (t_list *)malloc(sizeof(t_list));
+	if (!node)
+		return (NULL);
+	node->content = content;
+	node->next = NULL;
+	return (node);
 }

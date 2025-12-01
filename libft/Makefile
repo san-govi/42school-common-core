@@ -6,7 +6,7 @@
 #    By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/23 21:12:52 by sgovinda          #+#    #+#              #
-#    Updated: 2025/12/01 21:21:48 by sgovinda         ###   ########.fr        #
+#    Updated: 2025/12/01 22:39:16 by sgovinda         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,8 @@ SRC = ft_isalpha.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c
 OBJ = $(SRC:%.c=%.o)
+BONUS_SRC = ft_lstnew.c
+BONUS_OBJ = $(BONUS_SRC:%.c=%.o)
 
 # Default rule to build entire library if needed, otherwise do nothing.
 all: $(NAME)
@@ -61,17 +63,22 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
+# Bonus rule to add bonus functions to library.
+bonus: $(BONUS_OBJ)
+	ar rcs $(NAME) $(BONUS_OBJ)
+
 # Compile C files into object files.
 %.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
-
+	
 # Remove object files.
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(BONUS_OBJ)
 
 # Remove object files and the final library.
 fclean: clean
 	rm -f $(NAME)
 
 # Runs fclean and then rebuilds entire library.
-re: fclean all 
+re: fclean all
+
