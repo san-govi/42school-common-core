@@ -6,7 +6,7 @@
 #    By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/23 21:12:52 by sgovinda          #+#    #+#              #
-#    Updated: 2025/12/02 16:28:23 by sgovinda         ###   ########.fr        #
+#    Updated: 2025/12/02 16:42:38 by sgovinda         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,8 @@ BONUS_SRC = ft_lstnew.c \
 			ft_lstlast.c \
 			ft_lstadd_back.c \
 			ft_lstdelone.c \
-			ft_lstclear.c
+			ft_lstclear.c \
+			ft_lstiter.c
 BONUS_OBJ = $(BONUS_SRC:%.c=%.o)
 
 # Default rule to build entire library if needed, otherwise do nothing.
