@@ -6,7 +6,7 @@
 #    By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/23 21:12:52 by sgovinda          #+#    #+#              #
-#    Updated: 2025/12/02 00:18:38 by sgovinda         ###   ########.fr        #
+#    Updated: 2025/12/02 00:43:31 by sgovinda         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,8 @@ OBJ = $(SRC:%.c=%.o)
 BONUS_SRC = ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
-			ft_lstlast.c
+			ft_lstlast.c \
+			ft_lstadd_back.c
 BONUS_OBJ = $(BONUS_SRC:%.c=%.o)
 
 # Default rule to build entire library if needed, otherwise do nothing.
