@@ -6,16 +6,16 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 16:43:01 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/12/02 16:49:26 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/02 18:22:42 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-void print_content(void *content)
+void	print_content(void *content)
 {
-    printf("%s\n", (char *)content);
+	printf("%s\n", (char *)content);
 }
 
 int	main(void)
@@ -24,7 +24,7 @@ int	main(void)
 	char	*str;
 	char	*str2;
 	char	*str3;
-	
+
 	str = ft_strdup("A");
 	str2 = ft_strdup("B");
 	str3 = ft_strdup("C");

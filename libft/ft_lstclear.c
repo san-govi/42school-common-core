@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 01:06:41 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/12/02 01:12:32 by sgovinda         ###   ########.fr       */
+/*   Updated: 2025/12/02 18:21:38 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 
 	if (!lst || !del)
 		return ;
-	while(*lst)
+	while (*lst)
 	{
 		tmp = (*lst)->next;
 		del((*lst)->content);
