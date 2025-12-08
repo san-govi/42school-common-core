@@ -5,5 +5,6 @@ Collection of 42 School Common Core projects I’ve completed, documenting my le
 
 | Project Name       | Status       | Final Grade | Completed | Topics covered |
 |--------------------|--------------|-------------|-----------|-----------|
-| Libft              | In Progress  |             | ❌        | C basics, memory management, linked lists |
+| Libft              |  Completed  |   125/125   | ✅ Success          | C basics, memory management, linked lists |
+| Printf              |  In progress  |      |          | Variadic functions|
 
