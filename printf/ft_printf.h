@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/06 21:21:12 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/02/21 15:36:10 by sgovinda         ###   ########.fr       */
+/*   Created: 2026/02/21 16:58:18 by sgovinda          #+#    #+#             */
+/*   Updated: 2026/02/21 17:32:55 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
-#include "printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
+# include <unistd.h> // for write
+# include <stdlib.h> // for malloc, and free
+# include <stdarg.h> // for va_start, va_arg, va_copy, and va_end
 
-int	ft_printf(const char *format, ...)
-{
-	va_list	arg;
+int		ft_printf(const char *format, ...);
 
-	va_start(arg, format);
-	while (*format)
-	{
-		if (format == '%')
-		{
-			convert(format + 1, arg);
-		}
-		
-	}
-}
+#endif
