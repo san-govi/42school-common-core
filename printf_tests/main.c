@@ -6,8 +6,13 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 16:31:42 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/02/21 16:32:00 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/02/21 22:36:25 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//Add test code here
+#include "ft_printf.h"
+
+int	main(void)
+{
+	ft_printf("I have an %c and a %c and a %f", 'A', 'D', 'C');
+}
