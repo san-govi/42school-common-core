@@ -1,29 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/06 21:21:12 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/02/21 15:36:10 by sgovinda         ###   ########.fr       */
+/*   Created: 2026/02/21 16:31:42 by sgovinda          #+#    #+#             */
+/*   Updated: 2026/02/21 16:32:00 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
-#include "printf.h"
-
-int	ft_printf(const char *format, ...)
-{
-	va_list	arg;
-
-	va_start(arg, format);
-	while (*format)
-	{
-		if (format == '%')
-		{
-			convert(format + 1, arg);
-		}
-		
-	}
-}
+//Add test code here
