@@ -6,7 +6,7 @@
 #    By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/21 17:34:30 by sgovinda          #+#    #+#              #
-#    Updated: 2026/02/21 18:13:56 by sgovinda         ###   ########.fr        #
+#    Updated: 2026/02/21 23:12:13 by sgovinda         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror -I .
 
 # Source and object files
-SRC = src/ft_printf.c
+SRC = src/ft_printf.c \
+	src/handle_char.c
 OBJ = $(SRC:%.c=%.o)
 
 # Default rule to build entire library if needed, otherwise do nothing.

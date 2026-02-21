@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 16:58:18 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/02/21 17:32:55 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/02/21 23:10:53 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,6 @@
 # include <stdarg.h> // for va_start, va_arg, va_copy, and va_end
 
 int		ft_printf(const char *format, ...);
+void	handle_char(va_list arg);
 
 #endif
