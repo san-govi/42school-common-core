@@ -6,7 +6,7 @@
 #    By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/21 17:34:30 by sgovinda          #+#    #+#              #
-#    Updated: 2026/02/21 23:12:13 by sgovinda         ###   ########.fr        #
+#    Updated: 2026/02/22 00:48:22 by sgovinda         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,9 @@ CFLAGS = -Wall -Wextra -Werror -I .
 
 # Source and object files
 SRC = src/ft_printf.c \
-	src/handle_char.c
+	src/handle_char.c \
+	src/handle_string.c \
+	src/utils.c
 OBJ = $(SRC:%.c=%.o)
 
 # Default rule to build entire library if needed, otherwise do nothing.
@@ -30,7 +32,7 @@ $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 # Compile C files into object files.
-%.o: %.c ft_printf.h
+%.o: %.c ft_printf.h utils.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Remove object files.

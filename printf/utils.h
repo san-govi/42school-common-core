@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/21 16:58:18 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/02/22 00:13:19 by sgovinda         ###   ########.fr       */
+/*   Created: 2026/02/22 00:47:36 by sgovinda          #+#    #+#             */
+/*   Updated: 2026/02/22 00:48:05 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef UTILS_H
+# define UTILS_H
 # include <unistd.h> // for write
 # include <stdlib.h> // for malloc, and free
 # include <stdarg.h> // for va_start, va_arg, va_copy, and va_end
-
-int		ft_printf(const char *format, ...);
-
-//Specifier handlers.
-void	handle_char(va_list arg);
-void	handle_string(va_list arg);
 
 //Utility functions.
 int		ft_strlen(char *str);

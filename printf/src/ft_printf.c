@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 21:21:12 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/02/21 23:25:19 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/02/22 00:01:16 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	handle_specifier(char specifier, va_list arg)
 	if (specifier == 'c')
 		handle_char(arg);
 	else if (specifier == 's')
-		handle_char(arg);
+		handle_string(arg);
 	else if (specifier == 'p')
 		handle_char(arg);
 	else if (specifier == 'd')
