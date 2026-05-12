@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 16:31:42 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/05/12 23:06:59 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/05/12 23:30:43 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int	main(void)
 {
 	// Tests %c specifier and invalid specifier.
-	ft_printf("I have an %c and a %c and a %f\n", 'A', 'D', 'C');
+	ft_printf("I have an %c and a %c and a %%\n", 'A', 'D', 'C');
 	ft_printf("I have an %c and a %c and a %f\n", 'A');
 
 	// Test %s specifier and null argument.

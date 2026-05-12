@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 21:21:12 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/05/12 22:59:05 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/05/12 23:30:34 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	handle_specifier(char specifier, va_list arg)
 	else if (specifier == 'X')
 		count += handle_char(arg);
 	else if (specifier == '%')
-		count += handle_char(arg);
+		count += write(1, "%", 1);
 	else
 		// Invalid specifiers print '%' and let ft_printf print the next char.
 		count += write(1, "%", 1);
