@@ -2,7 +2,7 @@
 
 ## Description
 Recode the printf() function from libc.
-Specifically handling the following conversions: c,s,p,d,i,u,x,X, and %.
+Specifically handling the following conversions: c, s, p, d, i, u, x, X, and %.
 
 ## Instructions
 
