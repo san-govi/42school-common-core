@@ -6,11 +6,10 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 14:17:27 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/05/13 16:06:10 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/05/13 22:31:46 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
 #include "ft_printf.h"
 #include "utils.h"
 
