@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 21:21:12 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/05/13 17:45:00 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/05/13 18:49:22 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,8 @@ int	handle_specifier(char specifier, va_list arg)
 		count += handle_unsigned_int(va_arg(arg, unsigned int));
 	else if (specifier == 'p')
 		count += handle_char(arg);
-	else if (specifier == 'x')
-		count += handle_char(arg);
-	else if (specifier == 'X')
-		count += handle_char(arg);
+	else if (specifier == 'x' || specifier == 'X')
+		count += handle_hexadecimal(va_arg(arg, unsigned int), specifier);
 	else if (specifier == '%')
 		count += write(1, "%", 1);
 	else

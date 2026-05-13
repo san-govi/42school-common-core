@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 16:58:18 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/05/13 17:47:17 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/05/13 18:48:40 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ int	handle_char(va_list arg);
 int	handle_string(va_list arg);
 int	handle_nbr(long int);
 int	handle_unsigned_int(unsigned int);
+int	handle_hexadecimal(unsigned int, char);
 #endif
