@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 18:05:00 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/05/13 18:49:37 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/05/13 22:17:43 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,16 @@
 ** Returns count of digits that must be printed.
 */
 
-int	handle_hexadecimal(unsigned int	nbr, char specifier)
+int	handle_hexadecimal(unsigned int nbr, char specifier)
 {
-	char *	hexadecimal_upper;
-	char *	hexadecimal_lower;
+	char	*hexadecimal_upper;
+	char	*hexadecimal_lower;
 	int		count;
 
 	count = 0;
 	hexadecimal_upper = "0123456789ABCDEF";
 	hexadecimal_lower = "0123456789abcdef";
-	if(nbr > 15)
+	if (nbr > 15)
 	{
 		count += handle_hexadecimal(nbr / 16, specifier);
 	}

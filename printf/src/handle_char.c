@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 23:09:28 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/05/13 19:01:14 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/05/13 22:16:03 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@
 */
 int	handle_char(char c)
 {
-	return(write(1, &c, 1));
+	return (write(1, &c, 1));
 }

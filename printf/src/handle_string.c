@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 00:01:47 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/05/13 19:30:11 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/05/13 22:19:09 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ int	handle_string(char *s)
 		s = "(null)";
 	len = ft_strlen(s);
 	write(1, s, len);
-	return(len);
+	return (len);
 }

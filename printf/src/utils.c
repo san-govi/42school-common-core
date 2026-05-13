@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 00:36:19 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/05/13 16:05:52 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/05/13 22:20:10 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ int	ft_strlen(char *str)
 */
 int	ft_putchar(char c)
 {
-	return(write(1, &c, 1));
+	return (write(1, &c, 1));
 }
