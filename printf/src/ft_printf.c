@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 21:21:12 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/05/13 18:49:22 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/05/13 19:06:39 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 #include "ft_printf.h"
 
 /*
-** Dispatches the correct handler based on the format specifier.
-** For now, all specifiers call handle_char() as a placeholder.
+** Extracts the next argument in va_list.
+** Dispatches the correct handler based on the format specifier extracted.
 ** Invalid specifiers print '%' and leave the character to be printed literally.
 */
 int	handle_specifier(char specifier, va_list arg)
@@ -24,15 +24,15 @@ int	handle_specifier(char specifier, va_list arg)
 
 	count = 0;
 	if (specifier == 'c')
-		count += handle_char(arg);
+		count += handle_char((char)va_arg(arg, int));
 	else if (specifier == 's')
-		count += handle_string(arg);
+		count += handle_string(va_arg(arg, char *));
 	else if (specifier == 'i' || specifier == 'd')
 		count += handle_nbr(va_arg(arg, int));
 	else if (specifier == 'u')
 		count += handle_unsigned_int(va_arg(arg, unsigned int));
 	else if (specifier == 'p')
-		count += handle_char(arg);
+		count += handle_pointer((unsigned long)va_arg(arg, void *));
 	else if (specifier == 'x' || specifier == 'X')
 		count += handle_hexadecimal(va_arg(arg, unsigned int), specifier);
 	else if (specifier == '%')

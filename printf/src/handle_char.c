@@ -6,22 +6,17 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 23:09:28 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/05/12 23:00:53 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/05/13 19:01:14 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
 #include "ft_printf.h"
 
 /*
 ** Handles the %c specifier.
-** Extracts the next argument as an int (default promotion),
 ** casts it to char, and writes it to stdout.
 */
-int	handle_char(va_list arg)
+int	handle_char(char c)
 {
-	char	c;
-	
-	c = (char)va_arg(arg, int);
 	return(write(1, &c, 1));
 }

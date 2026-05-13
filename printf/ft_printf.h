@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 16:58:18 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/05/13 18:48:40 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/05/13 19:30:50 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,10 @@
 int		ft_printf(const char *format, ...);
 
 //Specifier handlers.
-int	handle_char(va_list arg);
-int	handle_string(va_list arg);
+int	handle_char(char);
+int	handle_string(char *);
 int	handle_nbr(long int);
 int	handle_unsigned_int(unsigned int);
 int	handle_hexadecimal(unsigned int, char);
+int handle_pointer(unsigned long ptr);
 #endif
