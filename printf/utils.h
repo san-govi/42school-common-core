@@ -6,17 +6,17 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 00:47:36 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/05/13 16:10:33 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/05/13 19:55:40 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef UTILS_H
 # define UTILS_H
-# include <unistd.h> // for write
-# include <stdlib.h> // for malloc, and free
-# include <stdarg.h> // for va_start, va_arg, va_copy, and va_end
+# include <unistd.h> /* for write */
+# include <stdlib.h> /* for malloc, and free */
+# include <stdarg.h> /* for va_start, va_arg, va_copy, and va_end */
 
-//Utility functions.
+/* Utility functions. */
 int	ft_strlen(char *str);
 int	ft_putchar(char c);
 

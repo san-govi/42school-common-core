@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 21:21:12 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/05/13 19:06:39 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/05/13 21:57:29 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 /*
 ** Extracts the next argument in va_list.
 ** Dispatches the correct handler based on the format specifier extracted.
-** Invalid specifiers print '%' and leave the character to be printed literally.
 */
 int	handle_specifier(char specifier, va_list arg)
 {
@@ -37,43 +36,40 @@ int	handle_specifier(char specifier, va_list arg)
 		count += handle_hexadecimal(va_arg(arg, unsigned int), specifier);
 	else if (specifier == '%')
 		count += write(1, "%", 1);
-	else
-		// Invalid specifiers print '%' and let ft_printf print the next char.
-		count += write(1, "%", 1);
 	return (count);
 }
 /*
 ** Main ft_printf loop:
 ** - Prints characters until '%' is found.
 ** - On '%', moves to the specifier and dispatches correct handler.
-** - Only advances past the specifier if it is valid.
-** - Invalid specifiers print '%' and then the character literally
+** - Only advances past the specifier if it is valid, otherwise returns -1.
 */
+
 int	ft_printf(const char *format, ...)
 {
 	va_list	arg;
-	int		counter;
+	int		count;
 
-	counter = 0;
+	count = 0;
 	va_start(arg, format);
 	while (*format)
 	{
-		if (*format == '%') // Detect specfier.
+		if (*format == '%')
 		{
-			format++; // Move to specifier.
-			counter += handle_specifier(*format, arg); // Dispatch correct handler.
+			format++;
 			if (*format == 'c' || *format == 's' || *format == 'p'
 				|| *format == 'd' || *format == 'i' || *format == 'u'
 				|| *format == 'x' || *format == 'X' || *format == '%' )
-				format++; // Moves on only if specifier is valid.
+				count += handle_specifier(*format++, arg);
+			else
+			{
+				va_end(arg);
+				return (-1);
+			}
 		}
 		else
-		{
-			write(1, format, 1);
-			counter++;
-			format++;
-		}
+			count += write(1, format++, 1);
 	}
 	va_end(arg);
-	return (counter);
+	return (count);
 }
