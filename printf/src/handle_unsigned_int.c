@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   handle_unsigned_int.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/21 16:58:18 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/05/13 17:47:17 by sgovinda         ###   ########.fr       */
+/*   Created: 2026/05/13 17:48:26 by sgovinda          #+#    #+#             */
+/*   Updated: 2026/05/13 17:53:37 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <unistd.h> // for write
-# include <stdlib.h> // for malloc, and free
-# include <stdarg.h> // for va_start, va_arg, va_copy, and va_end
+#include "ft_printf.h"
+#include "utils.h"
 
-int		ft_printf(const char *format, ...);
+/*
+**Handles the %u specifier.
+** Extracts the next argument as an unsigned integer and print it.
+** Returns the number of digits.
+*/
 
-//Specifier handlers.
-int	handle_char(va_list arg);
-int	handle_string(va_list arg);
-int	handle_nbr(long int);
-int	handle_unsigned_int(unsigned int);
-#endif
+int	handle_unsigned_int(unsigned int	nbr)
+{
+	int	count;
+
+	count = 0;
+	if (nbr > 9)
+	{
+		count += handle_unsigned_int(nbr / 10);
+	}
+	count += ft_putchar((nbr % 10) + '0');
+	return (count);
+}
+

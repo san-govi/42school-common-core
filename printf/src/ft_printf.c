@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 21:21:12 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/05/12 23:30:34 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/05/13 17:45:00 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,11 @@ int	handle_specifier(char specifier, va_list arg)
 		count += handle_char(arg);
 	else if (specifier == 's')
 		count += handle_string(arg);
-	else if (specifier == 'p')
-		count += handle_char(arg);
-	else if (specifier == 'd')
-		count += handle_char(arg);
-	else if (specifier == 'i')
-		count += handle_char(arg);
+	else if (specifier == 'i' || specifier == 'd')
+		count += handle_nbr(va_arg(arg, int));
 	else if (specifier == 'u')
+		count += handle_unsigned_int(va_arg(arg, unsigned int));
+	else if (specifier == 'p')
 		count += handle_char(arg);
 	else if (specifier == 'x')
 		count += handle_char(arg);

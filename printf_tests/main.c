@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 16:31:42 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/05/12 23:30:43 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/05/13 17:54:40 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ int	main(void)
     int real_ret;
 
     // Test real printf
-    real_ret = printf("Real: Hello %s!\n", "World");
+    real_ret = printf("Real: Hello %i %u %s!\n", 123, -123, "World");
     
     // Test your ft_printf
-    my_ret = ft_printf("Mine: Hello %s!\n", "World");
+    my_ret = ft_printf("Mine: Hello %i %u %s!\n", 123, -123, "World");
 
     // Print the results
     printf("Real returned: %d\n", real_ret);

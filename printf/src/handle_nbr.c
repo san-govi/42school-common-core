@@ -1,41 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   handle_nbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/22 00:36:19 by sgovinda          #+#    #+#             */
-/*   Updated: 2026/05/13 16:05:52 by sgovinda         ###   ########.fr       */
+/*   Created: 2026/05/13 14:17:27 by sgovinda          #+#    #+#             */
+/*   Updated: 2026/05/13 16:06:10 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdarg.h>
+#include "ft_printf.h"
 #include "utils.h"
 
 /*
-** Returns the length of a null-terminated string.
-** Iterates through the characters until the terminating '\0'.
+** Handles the %d and %i specifier.
+** Extracts the next argument as an integer or a decimal number and prints it.
 */
 
-int	ft_strlen(char *str)
+int	handle_nbr(long nbr)
 {
-	int	len;
+	int	count;
 
-	len = 0;
-	while (*str)
+	count = 0;
+	if (nbr < 0)
 	{
-		len++;
-		str++;
+		count += write(1, "-", 1);
+		nbr = -nbr;
 	}
-	return (len);
-}
-
-/*
-** Writes a single character to standard output.
-** Thin wrapper around write(1, &c, 1) for consistency across handlers.
-*/
-int	ft_putchar(char c)
-{
-	return(write(1, &c, 1));
+	if (nbr > 9)
+	{
+		count += handle_nbr(nbr / 10);
+	}
+	count += ft_putchar((nbr % 10) + '0');
+	return (count);
 }

@@ -6,7 +6,7 @@
 #    By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/21 17:34:30 by sgovinda          #+#    #+#              #
-#    Updated: 2026/02/22 00:48:22 by sgovinda         ###   ########.fr        #
+#    Updated: 2026/05/13 17:47:58 by sgovinda         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,8 @@ CFLAGS = -Wall -Wextra -Werror -I .
 SRC = src/ft_printf.c \
 	src/handle_char.c \
 	src/handle_string.c \
+	src/handle_nbr.c \
+	src/handle_unsigned_int.c \
 	src/utils.c
 OBJ = $(SRC:%.c=%.o)
 
