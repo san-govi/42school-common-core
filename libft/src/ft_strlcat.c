@@ -6,7 +6,7 @@
 /*   By: sgovinda <sgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 00:42:16 by sgovinda          #+#    #+#             */
-/*   Updated: 2025/12/06 16:08:57 by sgovinda         ###   ########.fr       */
+/*   Updated: 2026/06/14 22:13:35 by sgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 		dstlen++;
 		d++;
 	}
-
 	if (dstlen >= dsize)
-		return (dsize + srclen);
-	n = dsize - initial_dstlen - 1;
+		return (dsize + ft_strlen(src));
+	n = dsize - dstlen - 1;
 	while (n > 0 && *s != '\0')
 	{
 		*d++ = *s++;
