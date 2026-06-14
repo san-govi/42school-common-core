@@ -7,4 +7,5 @@ Collection of 42 School Common Core projects I’ve completed, documenting my le
 |--------------------|--------------|-------------|-----------|-----------|
 | Libft              |  Completed  |   125/125   | ✅ Success          | C basics, memory management, linked lists |
 | Printf              |  In progress  |      |          | Variadic functions|
+| Get Next Line              |  In progress  |      |          | Static variables|
 
