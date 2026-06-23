@@ -9,7 +9,7 @@ in C, reinforcing understanding of how buffered reading works.
 
 ### Compilation
 To compile the project, use the following command in your terminal:
-gcc -Wall -Wextra -Werror -D BUFFER_SIZE=[size] get_next_line.c get_next_line_utils.c -o gnl
+`gcc -Wall -Wextra -Werror -D BUFFER_SIZE=[size] get_next_line.c get_next_line_utils.c -o gnl`
 
 ### Execution
 Create a test file called `main.c` in the root directory that calls the get_next_line function, include the header file
@@ -25,11 +25,11 @@ Then execute the program:
 **Algorithm:** The chosen algorithm uses a static variable to retain the "remainder" of the data read from the file
 descriptor between successive function calls.
 
-Reading: We read from the file descriptor into a temporary buffer of size BUFFER_SIZE.
+**Reading:** We read from the file descriptor into a temporary buffer of size BUFFER_SIZE.
 
-Joining: We append this buffer to our static variable until a newline character (\n) is found or EOF is reached.
+**Joining:** We append this buffer to our static variable until a newline character (\n) is found or EOF is reached.
 
-Cleaning: We extract the line before the \n to return it, and update the static variable to hold only the remaining bytes for the next call.
+**Cleaning:** We extract the line before the \n to return it, and update the static variable to hold only the remaining bytes for the next call.
 This approach is efficient as it minimizes system calls (read) by utilizing the buffer effectively.
 
 ## Resources
@@ -41,4 +41,4 @@ AI was used purely as an educational resource for this project. Specifically, I 
 
 * Code review my functions and tests specifically helpful in debugging memory management logic.
 * Also learned more about Git workflows like brancing and remotes to esnure I could submit project to vogsphere.
-* No AI was used to generate the core code or algorithms for the ft_printfget_next_line implementation.
+* No AI was used to generate the core code or algorithms for the get_next_line implementation.
